@@ -25,7 +25,7 @@ namespace InventoryManagment.Data.Models
 
         public DateTime CreatedAt { get; set; }
 
-        public DateTime UpdatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
 
         [Required]
         public int CategoryId { get; set; }
