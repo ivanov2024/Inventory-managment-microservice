@@ -5,7 +5,9 @@ namespace InventoryManagment.Data;
 
 public class ApplicationDbContext : DbContext
 {
-    const string _connectionString = "Server=.;Database=InventoryManagmentDb;Trusted_Connection=True;MultipleActiveResultSets=true";
+    const string _connectionString = "Server=.;Database=InventoryManagmentDb;TrustServerCertificate=True;Trusted_Connection=True;MultipleActiveResultSets=true";
+
+    public ApplicationDbContext() { }
 
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)
