@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\ANDRIANA\\Desktop\\Projects\\Inventory-managment-microservice\\InventoryManagment\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|c:\\users\\andriana\\desktop\\projects\\inventory-managment-microservice\\inventorymanagment\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|c:\\users\\andriana\\desktop\\projects\\inventory-managment-microservice\\inventorymanagment\\services\\implementations\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|solutionrelative:services\\implementations\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|c:\\users\\andriana\\desktop\\projects\\inventory-managment-microservice\\inventorymanagment\\models\\productviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|solutionrelative:models\\productviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|c:\\users\\andriana\\desktop\\projects\\inventory-managment-microservice\\inventorymanagment\\services\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|solutionrelative:services\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|c:\\users\\andriana\\desktop\\projects\\inventory-managment-microservice\\inventorymanagment\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,6 +47,58 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\ANDRIANA\\Desktop\\Projects\\Inventory-managment-microservice\\InventoryManagment\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\ANDRIANA\\Desktop\\Projects\\Inventory-managment-microservice\\InventoryManagment\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Controllers\\ProductController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACIAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-21T09:51:54.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\ANDRIANA\\Desktop\\Projects\\Inventory-managment-microservice\\InventoryManagment\\Services\\Implementations\\ProductService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\ProductService.cs",
+              "ToolTip": "C:\\Users\\ANDRIANA\\Desktop\\Projects\\Inventory-managment-microservice\\InventoryManagment\\Services\\Implementations\\ProductService.cs",
+              "RelativeToolTip": "Services\\Implementations\\ProductService.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAADAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-21T09:54:33.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "C:\\Users\\ANDRIANA\\Desktop\\Projects\\Inventory-managment-microservice\\InventoryManagment\\Services\\Interfaces\\IProductService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IProductService.cs",
+              "ToolTip": "C:\\Users\\ANDRIANA\\Desktop\\Projects\\Inventory-managment-microservice\\InventoryManagment\\Services\\Interfaces\\IProductService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IProductService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-21T09:36:04.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ANDRIANA\\Desktop\\Projects\\Inventory-managment-microservice\\InventoryManagment\\Models\\ProductViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ProductViewModel.cs",
+              "ToolTip": "C:\\Users\\ANDRIANA\\Desktop\\Projects\\Inventory-managment-microservice\\InventoryManagment\\Models\\ProductViewModel.cs",
+              "RelativeToolTip": "Models\\ProductViewModel.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAowAoAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-21T09:46:34.854Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\ANDRIANA\\Desktop\\Projects\\Inventory-managment-microservice\\InventoryManagment\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
@@ -43,7 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "StockTransactionsConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\ANDRIANA\\Desktop\\Projects\\Inventory-managment-microservice\\InventoryManagment\\Data\\StockTransactionsConfiguration.cs",
               "RelativeDocumentMoniker": "Data\\StockTransactionsConfiguration.cs",
@@ -56,7 +124,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "ProductConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\ANDRIANA\\Desktop\\Projects\\Inventory-managment-microservice\\InventoryManagment\\Data\\ProductConfiguration.cs",
               "RelativeDocumentMoniker": "Data\\ProductConfiguration.cs",
@@ -69,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "CategoryConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\ANDRIANA\\Desktop\\Projects\\Inventory-managment-microservice\\InventoryManagment\\Data\\CategoryConfiguration.cs",
               "RelativeDocumentMoniker": "Data\\CategoryConfiguration.cs",
