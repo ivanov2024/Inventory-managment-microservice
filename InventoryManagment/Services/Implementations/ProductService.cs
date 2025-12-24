@@ -1,5 +1,6 @@
 ﻿using InventoryManagment.Data;
 using InventoryManagment.Data.Models;
+using InventoryManagment.Models;
 using InventoryManagment.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
@@ -35,7 +36,7 @@ namespace InventoryManagment.Services.Implementations
             }
         }
 
-        public async Task<Product> GetProductById(int productId)
+        public async Task<Product> GetProductByIdAsync(int productId)
         {
             try
             {
@@ -50,6 +51,28 @@ namespace InventoryManagment.Services.Implementations
             catch(Exception ex)
             {
                 _logger.LogError(ex, "Error fetching product by ID {ProductId}", productId);
+                throw;
+            }
+        }
+
+        public async Task<Product> CreateProductAsync(ProductViewModel productViewModel)
+        {
+            try
+            {
+                Product product = 
+                    new()
+                    {
+                        Name = productViewModel.Name,
+                        Price = productViewModel.Price,
+                        Quantity = productViewModel.Quantity,
+                        Description = productViewModel.Description,                        CategoryId = productViewModel.CategoryId
+                    };
+
+                return product;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error creating a product");
                 throw;
             }
         }

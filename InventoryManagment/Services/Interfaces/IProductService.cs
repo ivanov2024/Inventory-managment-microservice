@@ -1,4 +1,5 @@
 ﻿using InventoryManagment.Data.Models;
+using InventoryManagment.Models;
 
 namespace InventoryManagment.Services.Interfaces
 {
@@ -6,6 +7,8 @@ namespace InventoryManagment.Services.Interfaces
     {
         Task<IEnumerable<Product>> GetAllProductsAsync();
 
-        Task<Product> GetProductById(int productId);
+        Task<Product> GetProductByIdAsync(int productId);
+
+        Task<Product> CreateProductAsync(ProductViewModel productViewModel);
     }
 }

@@ -39,11 +39,12 @@ namespace InventoryManagment.Controllers
             return View(productsToViewModel);
         }
 
+        [HttpGet]
         public async Task<IActionResult> GetProductById(int productId)
         {
             var product
                 = await _productService
-                .GetProductById(productId);
+                .GetProductByIdAsync(productId);
 
             ProductViewModel productViewModel
                 = new()
@@ -59,6 +60,21 @@ namespace InventoryManagment.Controllers
                 };
 
             return View(productViewModel);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateProduct(ProductViewModel productViewModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(productViewModel);
+            }
+
+            var createdProduct
+                = await _productService
+                .CreateProductAsync(productViewModel);
+
+            return Redirect(nameof(Index));
         }
     }
 }
