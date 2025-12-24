@@ -1,6 +1,5 @@
 ﻿using InventoryManagment.Data;
 using InventoryManagment.Data.Models;
-using InventoryManagment.Models;
 using InventoryManagment.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,7 +16,7 @@ namespace InventoryManagment.Services.Implementations
             _logger = logger;
         }
 
-        public async Task<IEnumerable<ProductViewModel>> GetAllProductsAsync()
+        public async Task<IEnumerable<Product>> GetAllProductsAsync()
         {
             try
             {
@@ -27,21 +26,11 @@ namespace InventoryManagment.Services.Implementations
                     .AsNoTracking()
                     .ToListAsync();
 
-                return products
-                    .Select(p => new ProductViewModel
-                    {
-                        Id = p.Id,
-                        Name = p.Name,
-                        Price = p.Price,
-                        Quantity = p.Quantity,
-                        Description = p.Description,
-                        CreatedAt = p.CreatedAt.ToString("yyyy-MM-dd HH:mm:ss"),
-                        UpdatedAt = p.UpdatedAt!.Value.ToString("yyyy-MM-dd HH:mm:ss"),
-                        CategoryId = p.CategoryId
-                    });
+                return products;
             }
             catch(Exception ex)
             {
+                _logger.LogError(ex, "Error fetching all products");
                 throw;
             }
         }

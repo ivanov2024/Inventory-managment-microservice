@@ -6,17 +6,37 @@ namespace InventoryManagment.Controllers
 {
     public class ProductController : Controller
     {
+        const string _dateFormat = "dddd-MMMM-yyyy";
+
         private readonly IProductService _productService;
         public ProductController(IProductService productService)
             => _productService = productService;
-        
+
+        private static string FormatDate(DateTime? date)
+            => date?.ToString(_dateFormat)!;
+
         public async Task<IActionResult> Index()
         {
-            var products 
+            var products
                 = await _productService
                 .GetAllProductsAsync();
 
-            return View(products);
+            var productsToViewModel
+                = products
+                .Select(product => new ProductViewModel
+                {
+                    Id = product.Id,
+                    Name = product.Name,
+                    Price = product.Price,
+                    Quantity = product.Quantity,
+                    Description = product.Description,
+                    CreatedAt = FormatDate(product.CreatedAt),
+                    UpdatedAt = FormatDate(product.UpdatedAt),
+                    CategoryId = product.CategoryId,
+                })
+                .ToList();
+
+            return View(productsToViewModel);
         }
 
         public async Task<IActionResult> GetProductById(int productId)
@@ -33,8 +53,8 @@ namespace InventoryManagment.Controllers
                     Price = product.Price,
                     Quantity = product.Quantity,
                     Description = product.Description,
-                    CreatedAt = product.CreatedAt,
-                    UpdatedAt = product.UpdatedAt,
+                    CreatedAt = FormatDate(product.CreatedAt),
+                    UpdatedAt = FormatDate(product.UpdatedAt),
                     CategoryId = product.CategoryId,
                 };
 
