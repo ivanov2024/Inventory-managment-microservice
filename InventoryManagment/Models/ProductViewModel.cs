@@ -7,8 +7,8 @@
         public decimal Price { get; set; }
         public int Quantity { get; set; }
         public string Description { get; set; } = null!;
-        public DateTime CreatedAt { get; set; }
-        public DateTime? UpdatedAt { get; set; }
+        public string CreatedAt { get; set; } = null!;
+        public string? UpdatedAt { get; set; }
         public int CategoryId { get; set; }
     }
 }
