@@ -74,7 +74,15 @@ namespace InventoryManagment.Controllers
                 = await _productService
                 .CreateProductAsync(productViewModel);
 
-            return Redirect(nameof(Index));
+            if (!createdProduct)
+            {
+                ModelState
+                    .AddModelError(string.Empty, "Error creating a product");
+
+                return View(productViewModel);
+            }
+
+            return RedirectToAction(nameof(Index));
         }
     }
 }

@@ -55,7 +55,7 @@ namespace InventoryManagment.Services.Implementations
             }
         }
 
-        public async Task<Product> CreateProductAsync(ProductViewModel productViewModel)
+        public async Task<bool> CreateProductAsync(ProductViewModel productViewModel)
         {
             try
             {
@@ -68,7 +68,14 @@ namespace InventoryManagment.Services.Implementations
                         Description = productViewModel.Description,                        CategoryId = productViewModel.CategoryId
                     };
 
-                return product;
+                await _dbContext
+                    .Products
+                    .AddAsync(product);
+
+                await _dbContext
+                    .SaveChangesAsync();
+
+                return true;
             }
             catch (Exception ex)
             {
