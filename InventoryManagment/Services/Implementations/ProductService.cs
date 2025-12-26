@@ -83,5 +83,42 @@ namespace InventoryManagment.Services.Implementations
                 throw;
             }
         }
+
+        public async Task<bool> UpdateProductAsync(ProductViewModel productViewModel, int productId)
+        {
+            try
+            {
+                var product =
+                    await _dbContext
+                    .Products
+                    .FirstOrDefaultAsync(p => p.Id == productId) 
+                    ?? throw new Exception("No such product was found!");
+
+                bool categoryExists =
+                   await _dbContext
+                   .Categories
+                   .AnyAsync(c => c.Id == productViewModel.CategoryId);
+
+                if (!categoryExists) throw new Exception("No such category was found!");
+
+                product.Name = productViewModel.Name;
+                product.Price = productViewModel.Price;
+                product.Quantity = productViewModel.Quantity;
+                product.Description = productViewModel.Description;
+                product.CategoryId = productViewModel.CategoryId;
+                product.UpdatedAt = DateTime.UtcNow;
+
+                await 
+                    _dbContext
+                    .SaveChangesAsync();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error updating product with ID {0}", productId);
+                throw;
+            }
+        }
     }
 }

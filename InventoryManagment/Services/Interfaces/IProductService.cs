@@ -10,5 +10,7 @@ namespace InventoryManagment.Services.Interfaces
         Task<Product> GetProductByIdAsync(int productId);
 
         Task<bool> CreateProductAsync(ProductViewModel productViewModel);
+
+        Task<bool> UpdateProductAsync(ProductViewModel productViewModel, int productId);
     }
 }

@@ -84,5 +84,27 @@ namespace InventoryManagment.Controllers
 
             return RedirectToAction(nameof(Index));
         }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateProduct(ProductViewModel productViewModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(productViewModel);
+            }
+
+            var updatedProduct
+                = await _productService
+                .UpdateProductAsync(productViewModel, productViewModel.Id);
+
+            if (!updatedProduct)
+            {
+                ModelState
+                    .AddModelError(string.Empty, "Error updating the product");
+
+                return View(productViewModel);
+            }
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
