@@ -12,5 +12,7 @@ namespace InventoryManagment.Services.Interfaces
         Task<bool> CreateProductAsync(ProductViewModel productViewModel);
 
         Task<bool> UpdateProductAsync(ProductViewModel productViewModel, int productId);
+
+        Task<bool> DeleteProductAsync(int productId);
     }
 }

@@ -106,5 +106,23 @@ namespace InventoryManagment.Controllers
             }
             return RedirectToAction(nameof(Index));
         }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteProduct(int productId)
+        {
+            var deletedProduct
+                = await _productService
+                .DeleteProductAsync(productId);
+
+            if (!deletedProduct)
+            {
+                ModelState
+                    .AddModelError(string.Empty, "Error deleting the product");
+
+                return RedirectToAction(nameof(Index));
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

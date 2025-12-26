@@ -3,6 +3,7 @@ using InventoryManagment.Data.Models;
 using InventoryManagment.Models;
 using InventoryManagment.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Client;
 
 namespace InventoryManagment.Services.Implementations
 {
@@ -117,6 +118,32 @@ namespace InventoryManagment.Services.Implementations
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error updating product with ID {0}", productId);
+                throw;
+            }
+        }
+
+        public async Task<bool> DeleteProductAsync(int productId)
+        {
+            try
+            {
+                var product =
+                    await _dbContext
+                    .Products
+                    .FirstOrDefaultAsync(p => p.Id == productId)
+                    ?? throw new Exception("No such product was found!");
+
+                _dbContext
+                    .Products
+                    .Remove(product);
+
+                await _dbContext
+                    .SaveChangesAsync();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error deleting the product");
                 throw;
             }
         }
