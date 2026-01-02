@@ -52,7 +52,7 @@
               "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
               "ToolTip": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Controllers\\ProductController.cs",
               "RelativeToolTip": "Controllers\\ProductController.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAAAE0AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAYwHsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-21T09:51:54.833Z",
               "EditorCaption": ""
@@ -65,7 +65,7 @@
               "RelativeDocumentMoniker": "Services\\Implementations\\ProductService.cs",
               "ToolTip": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Services\\Implementations\\ProductService.cs",
               "RelativeToolTip": "Services\\Implementations\\ProductService.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAiwEUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADoAAAAAAAAAAAAkwI0AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-21T09:54:33.67Z",
               "EditorCaption": ""
@@ -78,7 +78,7 @@
               "RelativeDocumentMoniker": "Services\\Interfaces\\IProductService.cs",
               "ToolTip": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Services\\Interfaces\\IProductService.cs",
               "RelativeToolTip": "Services\\Interfaces\\IProductService.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAsAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-21T09:36:04.168Z",
               "EditorCaption": ""
@@ -93,8 +93,7 @@
               "RelativeToolTip": "Models\\ProductViewModel.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAYwAoAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-21T09:46:34.854Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-21T09:46:34.854Z"
             },
             {
               "$type": "Document",
@@ -130,8 +129,7 @@
               "RelativeToolTip": "Data\\ProductConfiguration.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAzwDIAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-21T08:59:43.028Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-21T08:59:43.028Z"
             },
             {
               "$type": "Document",
