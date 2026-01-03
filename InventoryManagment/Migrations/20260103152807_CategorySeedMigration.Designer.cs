@@ -4,6 +4,7 @@ using InventoryManagment.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InventoryManagment.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260103152807_CategorySeedMigration")]
+    partial class CategorySeedMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -122,68 +125,6 @@ namespace InventoryManagment.Migrations
                             t.HasCheckConstraint("CK_Product_Price_Range", "Price BETWEEN 0 AND 9999");
 
                             t.HasCheckConstraint("CK_Product_Quantity_Range", "Quantity BETWEEN 0 AND 9999");
-                        });
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CategoryId = 1,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Latest Apple smartphone with A17 chip, 6.7-inch display, and advanced camera system.",
-                            Name = "iPhone 15",
-                            Price = 1199.99m,
-                            Quantity = 0
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CategoryId = 1,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Flagship Samsung phone with cutting-edge features and high-resolution AMOLED display.",
-                            Name = "Samsung Galaxy S24",
-                            Price = 1099.99m,
-                            Quantity = 0
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CategoryId = 2,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Comprehensive guide to C# programming for beginners and professionals.",
-                            Name = "C# Programming Book",
-                            Price = 49.99m,
-                            Quantity = 0
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CategoryId = 3,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Comfortable cotton t-shirt, available in multiple colors and sizes.",
-                            Name = "Men's T-Shirt",
-                            Price = 19.99m,
-                            Quantity = 0
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CategoryId = 4,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "High-power kitchen blender perfect for smoothies, soups, and sauces.",
-                            Name = "Blender",
-                            Price = 89.99m,
-                            Quantity = 0
-                        },
-                        new
-                        {
-                            Id = 6,
-                            CategoryId = 4,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Automatic coffee maker with programmable timer and multiple brewing options.",
-                            Name = "Coffee Maker",
-                            Price = 129.99m,
-                            Quantity = 0
                         });
                 });
 

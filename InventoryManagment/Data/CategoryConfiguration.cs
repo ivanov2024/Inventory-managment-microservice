@@ -30,5 +30,32 @@ public class CategoryConfiguration : IEntityTypeConfiguration<Category>
             .WithOne(p => p.Category)
             .HasForeignKey(p => p.CategoryId)
             .OnDelete(DeleteBehavior.Restrict);
+
+        category.HasData(
+            new Category
+            {
+                Id = 1,
+                Name = "Electronics",
+                Description = "Phones, laptops, TVs and more"  
+            },
+            new Category
+            {
+                Id = 2,
+                Name = "Books",
+                Description = "Fiction, non-fiction, and educational books"
+            },
+            new Category
+            {
+                Id = 3,
+                Name = "Clothing",
+                Description = "Men's and women's apparel"
+            },
+            new Category 
+            { 
+                Id = 4,
+                Name = "Home & Kitchen", 
+                Description = "Appliances, furniture, and kitchenware" 
+            }
+        );
     }
 }
