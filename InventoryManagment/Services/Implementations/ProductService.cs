@@ -1,4 +1,5 @@
-﻿using InventoryManagment.Data;
+﻿using AutoMapper;
+using InventoryManagment.Data;
 using InventoryManagment.Data.Models;
 using InventoryManagment.DTOs.Product;
 using InventoryManagment.Models;
@@ -13,36 +14,26 @@ namespace InventoryManagment.Services.Implementations
 
         private readonly ApplicationDbContext _dbContext;
         private readonly ILogger<ProductService> _logger;
+        private readonly IMapper _mapper;
 
-        public ProductService(ApplicationDbContext dbContext, ILogger<ProductService> logger)
+        public ProductService(ApplicationDbContext dbContext, ILogger<ProductService> logger, IMapper mapper)
         {
             _dbContext = dbContext;
             _logger = logger;
+            _mapper = mapper;
         }
 
         public async Task<IEnumerable<ProductDto>> GetAllProductsAsync()
         {
             try
             {
-                 IEnumerable<ProductDto> products 
+                 var products 
                     = await _dbContext
                     .Products
                     .AsNoTracking()
-                    .Select(p => new ProductDto
-                    {
-                        Id = p.Id,
-                        Name = p.Name,
-                        Price = p.Price,
-                        Quantity = p.Quantity,
-                        Description = p.Description,
-                        CreatedAt = p.CreatedAt.ToString(_dateFormat),
-                        UpdatedAt = p.UpdatedAt!.Value.ToString(_dateFormat),
-                        CategoryId = p.CategoryId,
-                        Category = p.Category.Name
-                    })
                     .ToListAsync();
 
-                return products;
+                return _mapper.Map<IEnumerable<ProductDto>>(products);
             }
             catch(Exception ex)
             {
@@ -55,26 +46,13 @@ namespace InventoryManagment.Services.Implementations
         {
             try
             {
-                ProductDto product = 
+                var product = 
                      _dbContext
                     .Products
                     .AsNoTracking()
-                    .Where(p => p.Id == productId)
-                    .Select(p => new ProductDto
-                    {
-                        Id = p.Id,
-                        Name = p.Name,
-                        Price = p.Price,
-                        Quantity = p.Quantity,
-                        Description = p.Description,
-                        CreatedAt = p.CreatedAt.ToString(_dateFormat),
-                        UpdatedAt = p.UpdatedAt!.Value.ToString(_dateFormat),
-                        CategoryId = p.CategoryId,
-                        Category = p.Category.Name
-                    })
-                    .Single();
+                    .FirstAsync(p => p.Id == productId);
 
-                return product;
+                return _mapper.Map<ProductDto>(product);
             }
             catch(Exception ex)
             {
