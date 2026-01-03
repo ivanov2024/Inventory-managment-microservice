@@ -9,7 +9,7 @@ namespace InventoryManagment.Services.Interfaces
 
         Task<Category> GetCategoryByIdAsync(int categoryId);
 
-        Task<bool> CreateCategoryAsync(CategoryViewModel categoryViewModel);
+        Task<Category> CreateCategoryAsync(CategoryViewModel categoryViewModel);
 
         Task<bool> UpdateCategoryAsync(CategoryViewModel categoryViewModel, int categoryId);
 

@@ -56,7 +56,7 @@ namespace InventoryManagment.Services.Implementations
             }
         }
 
-        public async Task<bool> CreateCategoryAsync(CategoryViewModel categoryViewModel)
+        public async Task<Category> CreateCategoryAsync(CategoryViewModel categoryViewModel)
         {
             try
             {
@@ -74,7 +74,7 @@ namespace InventoryManagment.Services.Implementations
                 await _dbContext
                     .SaveChangesAsync();
 
-                return true;
+                return category;
             }
             catch (Exception ex)
             {

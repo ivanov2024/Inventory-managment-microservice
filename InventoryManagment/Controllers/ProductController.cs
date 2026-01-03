@@ -74,7 +74,7 @@ namespace InventoryManagment.Controllers
                 = await _productService
                 .CreateProductAsync(productViewModel);
 
-            if (!createdProduct)
+            if (createdProduct is null)
             {
                 ModelState
                     .AddModelError(string.Empty, "Error creating a product");
