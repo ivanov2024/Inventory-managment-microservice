@@ -1,13 +1,16 @@
 ﻿using InventoryManagment.Data.Models;
+using InventoryManagment.DTOs.Category;
 using InventoryManagment.Models;
 
 namespace InventoryManagment.Services.Interfaces
 {
     public interface ICategoryService
     {
-        Task<IEnumerable<Category>> GetAllCategoriesAsync();
+        Task<IEnumerable<CategoryDto>> GetAllCategoriesAsync();
 
-        Task<Category> GetCategoryByIdAsync(int categoryId);
+        Task<CategoryDto> GetCategoryByIdAsync(int categoryId);
+
+        Task<IEnumerable<CategoryWithProductsDto>> GetCategoriesWithProductsAsync();
 
         Task<Category> CreateCategoryAsync(CategoryViewModel categoryViewModel);
 

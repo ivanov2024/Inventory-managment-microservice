@@ -1,4 +1,5 @@
 ﻿using InventoryManagment.Data.Models;
+using InventoryManagment.DTOs.Product;
 using InventoryManagment.Models;
 using InventoryManagment.Services.Implementations;
 using InventoryManagment.Services.Interfaces;
@@ -16,11 +17,11 @@ namespace InventoryManagment.Controllers
             => _productService = productService;   
 
         [HttpGet]
-        public async Task<IEnumerable<Product>> GetAll()
+        public async Task<IEnumerable<ProductDto>> GetAll()
             => await _productService.GetAllProductsAsync();
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Product>> Get(int id)
+        public async Task<ActionResult<ProductDto>> Get(int id)
         {
             var product = await _productService.GetProductByIdAsync(id);
 

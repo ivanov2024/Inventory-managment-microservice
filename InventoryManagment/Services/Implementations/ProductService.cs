@@ -1,14 +1,16 @@
 ﻿using InventoryManagment.Data;
 using InventoryManagment.Data.Models;
+using InventoryManagment.DTOs.Product;
 using InventoryManagment.Models;
 using InventoryManagment.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Identity.Client;
 
 namespace InventoryManagment.Services.Implementations
 {
     public class ProductService : IProductService
     {
+        const string _dateFormat = "dddd-MMMM-yyyy";
+
         private readonly ApplicationDbContext _dbContext;
         private readonly ILogger<ProductService> _logger;
 
@@ -18,14 +20,26 @@ namespace InventoryManagment.Services.Implementations
             _logger = logger;
         }
 
-        public async Task<IEnumerable<Product>> GetAllProductsAsync()
+        public async Task<IEnumerable<ProductDto>> GetAllProductsAsync()
         {
             try
             {
-                 IEnumerable<Product> products 
+                 IEnumerable<ProductDto> products 
                     = await _dbContext
                     .Products
                     .AsNoTracking()
+                    .Select(p => new ProductDto
+                    {
+                        Id = p.Id,
+                        Name = p.Name,
+                        Price = p.Price,
+                        Quantity = p.Quantity,
+                        Description = p.Description,
+                        CreatedAt = p.CreatedAt.ToString(_dateFormat),
+                        UpdatedAt = p.UpdatedAt!.Value.ToString(_dateFormat),
+                        CategoryId = p.CategoryId,
+                        Category = p.Category.Name
+                    })
                     .ToListAsync();
 
                 return products;
@@ -37,15 +51,28 @@ namespace InventoryManagment.Services.Implementations
             }
         }
 
-        public async Task<Product> GetProductByIdAsync(int productId)
+        public async Task<ProductDto> GetProductByIdAsync(int productId)
         {
             try
             {
-                Product product = 
-                    await _dbContext
+                ProductDto product = 
+                     _dbContext
                     .Products
                     .AsNoTracking()
-                    .FirstAsync(p => p.Id == productId);
+                    .Where(p => p.Id == productId)
+                    .Select(p => new ProductDto
+                    {
+                        Id = p.Id,
+                        Name = p.Name,
+                        Price = p.Price,
+                        Quantity = p.Quantity,
+                        Description = p.Description,
+                        CreatedAt = p.CreatedAt.ToString(_dateFormat),
+                        UpdatedAt = p.UpdatedAt!.Value.ToString(_dateFormat),
+                        CategoryId = p.CategoryId,
+                        Category = p.Category.Name
+                    })
+                    .Single();
 
                 return product;
             }

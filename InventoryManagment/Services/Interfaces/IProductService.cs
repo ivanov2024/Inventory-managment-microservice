@@ -1,13 +1,14 @@
 ﻿using InventoryManagment.Data.Models;
+using InventoryManagment.DTOs.Product;
 using InventoryManagment.Models;
 
 namespace InventoryManagment.Services.Interfaces
 {
     public interface IProductService
     {
-        Task<IEnumerable<Product>> GetAllProductsAsync();
+        Task<IEnumerable<ProductDto>> GetAllProductsAsync();
 
-        Task<Product> GetProductByIdAsync(int productId);
+        Task<ProductDto> GetProductByIdAsync(int productId);
 
         Task<Product> CreateProductAsync(ProductViewModel productViewModel);
 

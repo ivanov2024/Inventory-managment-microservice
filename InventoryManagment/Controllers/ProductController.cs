@@ -15,6 +15,11 @@ namespace InventoryManagment.Controllers
         private static string FormatDate(DateTime? date)
             => date?.ToString(_dateFormat)!;
 
+        // Uncomment if date parsing is needed in the future
+        //private static DateTime? ParseDate(string? dateString)
+        //    => DateTime.TryParse(dateString, out DateTime parsedDate)
+        //        ? parsedDate : null;
+
         public async Task<IActionResult> Index()
         {
             var products
@@ -30,8 +35,8 @@ namespace InventoryManagment.Controllers
                     Price = product.Price,
                     Quantity = product.Quantity,
                     Description = product.Description,
-                    CreatedAt = FormatDate(product.CreatedAt),
-                    UpdatedAt = FormatDate(product.UpdatedAt),
+                    CreatedAt = product.CreatedAt,
+                    UpdatedAt = product.UpdatedAt,
                     CategoryId = product.CategoryId,
                 })
                 .ToList();
@@ -54,8 +59,8 @@ namespace InventoryManagment.Controllers
                     Price = product.Price,
                     Quantity = product.Quantity,
                     Description = product.Description,
-                    CreatedAt = FormatDate(product.CreatedAt),
-                    UpdatedAt = FormatDate(product.UpdatedAt),
+                    CreatedAt = product.CreatedAt,
+                    UpdatedAt = product.UpdatedAt,
                     CategoryId = product.CategoryId,
                 };
 

@@ -1,4 +1,5 @@
 ﻿using InventoryManagment.Data.Models;
+using InventoryManagment.DTOs.Category;
 using InventoryManagment.Models;
 using InventoryManagment.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -15,11 +16,15 @@ namespace InventoryManagment.Controllers
             => _categoryService = categoryService;   
 
         [HttpGet]
-        public async Task<IEnumerable<Category>> GetAll()
+        public async Task<IEnumerable<CategoryDto>> GetAllCategories()
             => await _categoryService.GetAllCategoriesAsync();
 
+        [HttpGet("with-products")]
+        public async Task<IEnumerable<CategoryWithProductsDto>> GetCategoriesWithProducts()
+            => await _categoryService.GetCategoriesWithProductsAsync();
+
         [HttpGet("{id}")]
-        public async Task<ActionResult<Category>> Get(int id)
+        public async Task<ActionResult<CategoryDto>> Get(int id)
         {
             var category = await _categoryService.GetCategoryByIdAsync(id);
 

@@ -1,5 +1,7 @@
 ﻿using InventoryManagment.Data;
 using InventoryManagment.Data.Models;
+using InventoryManagment.DTOs.Category;
+using InventoryManagment.DTOs.Product;
 using InventoryManagment.Models;
 using InventoryManagment.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -18,14 +20,20 @@ namespace InventoryManagment.Services.Implementations
             _logger = logger;
         }
 
-        public async Task<IEnumerable<Category>> GetAllCategoriesAsync()
+        public async Task<IEnumerable<CategoryDto>> GetAllCategoriesAsync()
         {
             try
             {
-                 IEnumerable<Category> categories 
+                 IEnumerable<CategoryDto> categories 
                     = await _dbContext
                     .Categories
                     .AsNoTracking()
+                    .Select(c => new CategoryDto
+                    {
+                        Id = c.Id,
+                        Name = c.Name,
+                        Description = c.Description,
+                    })
                     .ToListAsync();
 
                 return categories;
@@ -37,21 +45,65 @@ namespace InventoryManagment.Services.Implementations
             }
         }
 
-        public async Task<Category> GetCategoryByIdAsync(int categoryId)
+        public async Task<CategoryDto> GetCategoryByIdAsync(int categoryId)
         {
             try
             {
-                Category category = 
-                    await _dbContext
+                CategoryDto category =
+                     _dbContext
                     .Categories
                     .AsNoTracking()
-                    .FirstAsync(c => c.Id == categoryId);
+                    .Where(c => c.Id == categoryId)
+                    .Select(c => new CategoryDto
+                    {
+                        Id = c.Id,
+                        Name = c.Name,
+                        Description = c.Description,
+                    })
+                    .Single();
 
                 return category;
             }
             catch(Exception ex)
             {
                 _logger.LogError(ex, "Error fetching a category by ID {CategoryId}", categoryId);
+                throw;
+            }
+        }
+
+        public async Task<IEnumerable<CategoryWithProductsDto>> GetCategoriesWithProductsAsync()
+        {
+            try
+            {
+                IEnumerable<CategoryWithProductsDto> categories
+                    = await _dbContext
+                    .Categories
+                    .Include(c => c.Products)
+                    .AsNoTracking()
+                    .OrderBy(c => c.Id)
+                    .Select(c => new CategoryWithProductsDto
+                    {
+                        Id = c.Id,
+                        Name = c.Name,
+                        Description = c.Description,
+                        Products = c.Products.Select(p => new ProductDto
+                        {
+                            Id = p.Id,
+                            Name = p.Name,
+                            Price = p.Price,
+                            Quantity = p.Quantity,
+                            Description = p.Description,
+                            CategoryId = p.CategoryId,
+                            Category = c.Name,
+                        }).ToList()
+                    })
+                    .ToListAsync();
+
+                return categories;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error fetching all categories and their products");
                 throw;
             }
         }
