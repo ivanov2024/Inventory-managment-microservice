@@ -2,11 +2,8 @@
 using InventoryManagment.Data;
 using InventoryManagment.Data.Models;
 using InventoryManagment.DTOs.Category;
-using InventoryManagment.DTOs.Product;
-using InventoryManagment.Models;
 using InventoryManagment.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Identity.Client;
 
 namespace InventoryManagment.Services.Implementations
 {
@@ -81,16 +78,11 @@ namespace InventoryManagment.Services.Implementations
             }
         }
 
-        public async Task<Category> CreateCategoryAsync(CategoryViewModel categoryViewModel)
+        public async Task<CategoryDto> CreateCategoryAsync(CategoryCreateUpdateDto categoryDto)
         {
             try
             {
-                Category category =
-                    new()
-                    {
-                        Name = categoryViewModel.Name,
-                        Description = categoryViewModel.Description,
-                    };
+                var category = _mapper.Map<Category>(categoryDto);
 
                 await _dbContext
                     .Categories
@@ -99,7 +91,7 @@ namespace InventoryManagment.Services.Implementations
                 await _dbContext
                     .SaveChangesAsync();
 
-                return category;
+                return _mapper.Map<CategoryDto>(category);
             }
             catch (Exception ex)
             {
@@ -108,7 +100,7 @@ namespace InventoryManagment.Services.Implementations
             }
         }
 
-        public async Task<bool> UpdateCategoryAsync(CategoryViewModel categoryViewModel, int categoryId)
+        public async Task<bool> UpdateCategoryAsync(CategoryCreateUpdateDto categoryDto, int categoryId)
         {
             try
             {
@@ -118,8 +110,8 @@ namespace InventoryManagment.Services.Implementations
                     .FirstOrDefaultAsync(c => c.Id == categoryId) 
                     ?? throw new Exception("No such category was found!");
 
-                category.Name = categoryViewModel.Name;
-                category.Description = categoryViewModel.Description;
+                category.Name = categoryDto.Name;
+                category.Description = categoryDto.Description;
 
                 await 
                     _dbContext

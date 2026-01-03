@@ -1,7 +1,4 @@
-﻿using InventoryManagment.Data.Models;
-using InventoryManagment.DTOs.Product;
-using InventoryManagment.Models;
-using InventoryManagment.Services.Implementations;
+﻿using InventoryManagment.DTOs.Product;
 using InventoryManagment.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -31,22 +28,22 @@ namespace InventoryManagment.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Product>> Create([FromBody] ProductViewModel productViewModel)
+        public async Task<ActionResult<ProductDto>> Create([FromBody] ProductCreateUpdateDto productDto)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
-            var createdProduct = await _productService.CreateProductAsync(productViewModel);
+            var createdProduct = await _productService.CreateProductAsync(productDto);
 
             // Returns 201 Created with a Location header pointing to the newly created resource
             return CreatedAtAction(nameof(Get), new { id = createdProduct.Id }, createdProduct);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, [FromBody] ProductViewModel productViewModel)
+        public async Task<IActionResult> Update(int id, [FromBody] ProductCreateUpdateDto productDto)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
-            var isUpdated = await _productService.UpdateProductAsync(productViewModel, id);
+            var isUpdated = await _productService.UpdateProductAsync(productDto, id);
 
             if (!isUpdated) return NotFound();
 

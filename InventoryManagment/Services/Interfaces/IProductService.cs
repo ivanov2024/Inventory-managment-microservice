@@ -1,6 +1,4 @@
-﻿using InventoryManagment.Data.Models;
-using InventoryManagment.DTOs.Product;
-using InventoryManagment.Models;
+﻿using InventoryManagment.DTOs.Product;
 
 namespace InventoryManagment.Services.Interfaces
 {
@@ -10,9 +8,9 @@ namespace InventoryManagment.Services.Interfaces
 
         Task<ProductDto> GetProductByIdAsync(int productId);
 
-        Task<Product> CreateProductAsync(ProductViewModel productViewModel);
+        Task<ProductDto> CreateProductAsync(ProductCreateUpdateDto productDto);
 
-        Task<bool> UpdateProductAsync(ProductViewModel productViewModel, int productId);
+        Task<bool> UpdateProductAsync(ProductCreateUpdateDto productDto, int productId);
 
         Task<bool> DeleteProductAsync(int productId);
     }

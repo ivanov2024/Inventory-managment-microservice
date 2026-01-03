@@ -1,6 +1,4 @@
-﻿using InventoryManagment.Data.Models;
-using InventoryManagment.DTOs.Category;
-using InventoryManagment.Models;
+﻿using InventoryManagment.DTOs.Category;
 using InventoryManagment.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -34,22 +32,22 @@ namespace InventoryManagment.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Category>> Create([FromBody] CategoryViewModel categoryViewModel)
+        public async Task<ActionResult<CategoryDto>> Create([FromBody] CategoryCreateUpdateDto categoryDto)
         {
             if(!ModelState.IsValid) return BadRequest(ModelState);
             
-            var createdCategory = await _categoryService.CreateCategoryAsync(categoryViewModel);
+            var createdCategory = await _categoryService.CreateCategoryAsync(categoryDto);
 
             // Returns 201 Created with a Location header pointing to the newly created resource
             return CreatedAtAction(nameof(Get), new {id = createdCategory.Id} ,createdCategory);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, [FromBody] CategoryViewModel categoryViewModel)
+        public async Task<IActionResult> Update(int id, [FromBody] CategoryCreateUpdateDto categoryDto)
         {
             if(!ModelState.IsValid) return BadRequest(ModelState);
 
-            var isUpdated = await _categoryService.UpdateCategoryAsync(categoryViewModel, id);
+            var isUpdated = await _categoryService.UpdateCategoryAsync(categoryDto, id);
 
             if (!isUpdated) return NotFound();
 

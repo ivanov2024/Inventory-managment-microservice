@@ -1,6 +1,4 @@
-﻿using InventoryManagment.Data.Models;
-using InventoryManagment.DTOs.Category;
-using InventoryManagment.Models;
+﻿using InventoryManagment.DTOs.Category;
 
 namespace InventoryManagment.Services.Interfaces
 {
@@ -12,9 +10,9 @@ namespace InventoryManagment.Services.Interfaces
 
         Task<IEnumerable<CategoryWithProductsDto>> GetCategoriesWithProductsAsync();
 
-        Task<Category> CreateCategoryAsync(CategoryViewModel categoryViewModel);
+        Task<CategoryDto> CreateCategoryAsync(CategoryCreateUpdateDto categoryDto);
 
-        Task<bool> UpdateCategoryAsync(CategoryViewModel categoryViewModel, int categoryId);
+        Task<bool> UpdateCategoryAsync(CategoryCreateUpdateDto categoryDto, int categoryId);
 
         Task<bool> DeleteCategoryAsync(int categoryId);
     }

@@ -1,4 +1,5 @@
-﻿using InventoryManagment.Models;
+﻿using InventoryManagment.DTOs.Product;
+using InventoryManagment.Models;
 using InventoryManagment.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,39 +7,40 @@ namespace InventoryManagment.Controllers
 {
     public class ProductController : Controller
     {
-        const string _dateFormat = "dddd-MMMM-yyyy";
-
         private readonly IProductService _productService;
         public ProductController(IProductService productService)
             => _productService = productService;
 
-        private static string FormatDate(DateTime? date)
-            => date?.ToString(_dateFormat)!;
+        private static ProductViewModel ToViewModel(ProductDto product)
+            => new()
+            {
+                Id = product.Id,
+                Name = product.Name,
+                Price = product.Price,
+                Quantity = product.Quantity,
+                Description = product.Description,
+                CreatedAt = product.CreatedAt,
+                UpdatedAt = product.UpdatedAt,
+                CategoryId = product.CategoryId,
+            };
 
-        // Uncomment if date parsing is needed in the future
-        //private static DateTime? ParseDate(string? dateString)
-        //    => DateTime.TryParse(dateString, out DateTime parsedDate)
-        //        ? parsedDate : null;
+        // Map ProductViewModel to ProductCreateUpdateDto
+        private static ProductCreateUpdateDto ToCreateUpdateDto(ProductViewModel productViewModel)
+            => new()
+            {
+                Name = productViewModel.Name,
+                Price = productViewModel.Price,
+                Quantity = productViewModel.Quantity,
+                Description = productViewModel.Description,
+                CategoryId = productViewModel.CategoryId,
+            };
 
         public async Task<IActionResult> Index()
         {
-            var products
-                = await _productService
-                .GetAllProductsAsync();
+            var products = await _productService.GetAllProductsAsync();
 
-            var productsToViewModel
-                = products
-                .Select(product => new ProductViewModel
-                {
-                    Id = product.Id,
-                    Name = product.Name,
-                    Price = product.Price,
-                    Quantity = product.Quantity,
-                    Description = product.Description,
-                    CreatedAt = product.CreatedAt,
-                    UpdatedAt = product.UpdatedAt,
-                    CategoryId = product.CategoryId,
-                })
+            var productsToViewModel = products
+                .Select(ToViewModel)
                 .ToList();
 
             return View(productsToViewModel);
@@ -47,22 +49,9 @@ namespace InventoryManagment.Controllers
         [HttpGet]
         public async Task<IActionResult> GetProductById(int productId)
         {
-            var product
-                = await _productService
-                .GetProductByIdAsync(productId);
+            var product = await _productService.GetProductByIdAsync(productId);
 
-            ProductViewModel productViewModel
-                = new()
-                {
-                    Id = product.Id,
-                    Name = product.Name,
-                    Price = product.Price,
-                    Quantity = product.Quantity,
-                    Description = product.Description,
-                    CreatedAt = product.CreatedAt,
-                    UpdatedAt = product.UpdatedAt,
-                    CategoryId = product.CategoryId,
-                };
+            var productViewModel = ToViewModel(product);
 
             return View(productViewModel);
         }
@@ -75,9 +64,8 @@ namespace InventoryManagment.Controllers
                 return View(productViewModel);
             }
 
-            var createdProduct
-                = await _productService
-                .CreateProductAsync(productViewModel);
+            var createdProduct = await _productService
+                .CreateProductAsync(ToCreateUpdateDto(productViewModel));
 
             if (createdProduct is null)
             {
@@ -98,9 +86,8 @@ namespace InventoryManagment.Controllers
                 return View(productViewModel);
             }
 
-            var updatedProduct
-                = await _productService
-                .UpdateProductAsync(productViewModel, productViewModel.Id);
+            var updatedProduct = await _productService
+                .UpdateProductAsync(ToCreateUpdateDto(productViewModel), productViewModel.Id);
 
             if (!updatedProduct)
             {

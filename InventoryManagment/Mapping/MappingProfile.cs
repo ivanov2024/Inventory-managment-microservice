@@ -10,10 +10,11 @@ namespace InventoryManagment.Mapping
         public MappingProfile()
         {
             CreateMap<Category, CategoryDto>();
-
             CreateMap<Category, CategoryWithProductsDto>();
+            CreateMap<CategoryCreateUpdateDto, Category>();
 
             CreateMap<Product, ProductDto>();
+            CreateMap<ProductCreateUpdateDto, Product>();
         }
     }
 }

@@ -2,7 +2,6 @@
 using InventoryManagment.Data;
 using InventoryManagment.Data.Models;
 using InventoryManagment.DTOs.Product;
-using InventoryManagment.Models;
 using InventoryManagment.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,8 +9,6 @@ namespace InventoryManagment.Services.Implementations
 {
     public class ProductService : IProductService
     {
-        const string _dateFormat = "dddd-MMMM-yyyy";
-
         private readonly ApplicationDbContext _dbContext;
         private readonly ILogger<ProductService> _logger;
         private readonly IMapper _mapper;
@@ -47,7 +44,7 @@ namespace InventoryManagment.Services.Implementations
             try
             {
                 var product = 
-                     _dbContext
+                    await _dbContext
                     .Products
                     .AsNoTracking()
                     .FirstAsync(p => p.Id == productId);
@@ -61,18 +58,11 @@ namespace InventoryManagment.Services.Implementations
             }
         }
 
-        public async Task<Product> CreateProductAsync(ProductViewModel productViewModel)
+        public async Task<ProductDto> CreateProductAsync(ProductCreateUpdateDto productDto)
         {
             try
             {
-                Product product = 
-                    new()
-                    {
-                        Name = productViewModel.Name,
-                        Price = productViewModel.Price,
-                        Quantity = productViewModel.Quantity,
-                        Description = productViewModel.Description,                        CategoryId = productViewModel.CategoryId
-                    };
+                var product = _mapper.Map<Product>(productDto);
 
                 await _dbContext
                     .Products
@@ -81,7 +71,12 @@ namespace InventoryManagment.Services.Implementations
                 await _dbContext
                     .SaveChangesAsync();
 
-                return product;
+                await _dbContext
+                    .Entry(product)
+                    .Reference(p => p.Category)
+                    .LoadAsync();
+
+                return _mapper.Map<ProductDto>(product);
             }
             catch (Exception ex)
             {
@@ -90,7 +85,7 @@ namespace InventoryManagment.Services.Implementations
             }
         }
 
-        public async Task<bool> UpdateProductAsync(ProductViewModel productViewModel, int productId)
+        public async Task<bool> UpdateProductAsync(ProductCreateUpdateDto productDto, int productId)
         {
             try
             {
@@ -103,15 +98,15 @@ namespace InventoryManagment.Services.Implementations
                 bool categoryExists =
                    await _dbContext
                    .Categories
-                   .AnyAsync(c => c.Id == productViewModel.CategoryId);
+                   .AnyAsync(c => c.Id == productDto.CategoryId);
 
                 if (!categoryExists) throw new Exception("No such category was found!");
 
-                product.Name = productViewModel.Name;
-                product.Price = productViewModel.Price;
-                product.Quantity = productViewModel.Quantity;
-                product.Description = productViewModel.Description;
-                product.CategoryId = productViewModel.CategoryId;
+                product.Name = productDto.Name;
+                product.Price = productDto.Price;
+                product.Quantity = productDto.Quantity;
+                product.Description = productDto.Description;
+                product.CategoryId = productDto.CategoryId;
                 product.UpdatedAt = DateTime.UtcNow;
 
                 await 
