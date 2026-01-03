@@ -1,3 +1,8 @@
+using InventoryManagment.Data;
+using InventoryManagment.Services.Implementations;
+using InventoryManagment.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
+
 namespace InventoryManagment
 {
     public class Program
@@ -8,15 +13,28 @@ namespace InventoryManagment
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddSwaggerGen();
+
+            builder.Services.AddScoped<ICategoryService, CategoryService>();
+            builder.Services.AddScoped<IProductService, ProductService>();
+
+            builder.Services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("InventoryManagmentConnection")));
 
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
-            if (!app.Environment.IsDevelopment())
+            if (app.Environment.IsDevelopment())
             {
-                app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                app.UseExceptionHandler("/Home/Error");   
                 app.UseHsts();
+
+                app.UseSwagger();
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "InventoryManagment API V1");
+                    c.RoutePrefix = "swagger";
+                });
             }
 
             app.UseHttpsRedirection();
@@ -25,6 +43,8 @@ namespace InventoryManagment
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.MapControllers();
 
             app.MapControllerRoute(
                 name: "default",

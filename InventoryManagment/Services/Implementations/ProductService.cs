@@ -10,9 +10,9 @@ namespace InventoryManagment.Services.Implementations
     public class ProductService : IProductService
     {
         private readonly ApplicationDbContext _dbContext;
-        private readonly ILogger _logger;
+        private readonly ILogger<ProductService> _logger;
 
-        public ProductService(ApplicationDbContext dbContext, ILogger logger)
+        public ProductService(ApplicationDbContext dbContext, ILogger<ProductService> logger)
         {
             _dbContext = dbContext;
             _logger = logger;

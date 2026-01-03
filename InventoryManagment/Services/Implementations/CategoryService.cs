@@ -10,9 +10,9 @@ namespace InventoryManagment.Services.Implementations
     public class CategoryService : ICategoryService
     {
         private readonly ApplicationDbContext _dbContext;
-        private readonly ILogger _logger;
+        private readonly ILogger<CategoryService> _logger;
 
-        public CategoryService(ApplicationDbContext dbContext, ILogger logger)
+        public CategoryService(ApplicationDbContext dbContext, ILogger<CategoryService> logger)
         {
             _dbContext = dbContext;
             _logger = logger;

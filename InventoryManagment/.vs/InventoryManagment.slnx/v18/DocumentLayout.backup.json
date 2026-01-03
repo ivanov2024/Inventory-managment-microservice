@@ -1,38 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\",
+  "WorkspaceRootPath": "C:\\Users\\ANDRIANA\\Desktop\\Projects\\Inventory-managment-microservice\\InventoryManagment\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|d:\\github\\project 1 \u2014 inventory managment microservice\\inventory-managment-microservice\\inventorymanagment\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|c:\\users\\andriana\\desktop\\projects\\inventory-managment-microservice\\inventorymanagment\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|d:\\github\\project 1 \u2014 inventory managment microservice\\inventory-managment-microservice\\inventorymanagment\\services\\implementations\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|c:\\users\\andriana\\desktop\\projects\\inventory-managment-microservice\\inventorymanagment\\controllers\\productsapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|solutionrelative:controllers\\productsapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|c:\\users\\andriana\\desktop\\projects\\inventory-managment-microservice\\inventorymanagment\\services\\implementations\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|solutionrelative:services\\implementations\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|d:\\github\\project 1 \u2014 inventory managment microservice\\inventory-managment-microservice\\inventorymanagment\\services\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|solutionrelative:services\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|c:\\users\\andriana\\desktop\\projects\\inventory-managment-microservice\\inventorymanagment\\services\\implementations\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|solutionrelative:services\\implementations\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|d:\\github\\project 1 \u2014 inventory managment microservice\\inventory-managment-microservice\\inventorymanagment\\models\\productviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|solutionrelative:models\\productviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|d:\\github\\project 1 \u2014 inventory managment microservice\\inventory-managment-microservice\\inventorymanagment\\data\\productconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|solutionrelative:data\\productconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|d:\\github\\project 1 \u2014 inventory managment microservice\\inventory-managment-microservice\\inventorymanagment\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|c:\\users\\andriana\\desktop\\projects\\inventory-managment-microservice\\inventorymanagment\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|d:\\github\\project 1 \u2014 inventory managment microservice\\inventory-managment-microservice\\inventorymanagment\\data\\categoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|solutionrelative:data\\categoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|d:\\github\\project 1 \u2014 inventory managment microservice\\inventory-managment-microservice\\inventorymanagment\\data\\stocktransactionsconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|solutionrelative:data\\stocktransactionsconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,103 +35,71 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
-              "ToolTip": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "Controllers\\ProductController.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAAAE0AAAAJAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ANDRIANA\\Desktop\\Projects\\Inventory-managment-microservice\\InventoryManagment\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\ANDRIANA\\Desktop\\Projects\\Inventory-managment-microservice\\InventoryManagment\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwB0AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-21T09:51:54.833Z",
+              "WhenOpened": "2026-01-03T13:27:10.273Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ProductService.cs",
-              "DocumentMoniker": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Services\\Implementations\\ProductService.cs",
-              "RelativeDocumentMoniker": "Services\\Implementations\\ProductService.cs",
-              "ToolTip": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Services\\Implementations\\ProductService.cs",
-              "RelativeToolTip": "Services\\Implementations\\ProductService.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAiwEUAAAAAAAAAAAAAAA==",
+              "Title": "ProductsApiController.cs",
+              "DocumentMoniker": "C:\\Users\\ANDRIANA\\Desktop\\Projects\\Inventory-managment-microservice\\InventoryManagment\\Controllers\\ProductsApiController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductsApiController.cs",
+              "ToolTip": "C:\\Users\\ANDRIANA\\Desktop\\Projects\\Inventory-managment-microservice\\InventoryManagment\\Controllers\\ProductsApiController.cs",
+              "RelativeToolTip": "Controllers\\ProductsApiController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-21T09:54:33.67Z",
+              "WhenOpened": "2026-01-03T14:31:20.702Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "IProductService.cs",
-              "DocumentMoniker": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Services\\Interfaces\\IProductService.cs",
-              "RelativeDocumentMoniker": "Services\\Interfaces\\IProductService.cs",
-              "ToolTip": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Services\\Interfaces\\IProductService.cs",
-              "RelativeToolTip": "Services\\Interfaces\\IProductService.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAsAAAAUAAAAAAAAAA==",
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\ANDRIANA\\Desktop\\Projects\\Inventory-managment-microservice\\InventoryManagment\\Services\\Implementations\\ProductService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\ProductService.cs",
+              "ToolTip": "C:\\Users\\ANDRIANA\\Desktop\\Projects\\Inventory-managment-microservice\\InventoryManagment\\Services\\Implementations\\ProductService.cs",
+              "RelativeToolTip": "Services\\Implementations\\ProductService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-21T09:36:04.168Z",
+              "WhenOpened": "2026-01-03T13:50:06.791Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ProductViewModel.cs",
-              "DocumentMoniker": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Models\\ProductViewModel.cs",
-              "RelativeDocumentMoniker": "Models\\ProductViewModel.cs",
-              "ToolTip": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Models\\ProductViewModel.cs",
-              "RelativeToolTip": "Models\\ProductViewModel.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAYwAoAAAAuAAAAAAAAAA==",
+              "Title": "CategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\ANDRIANA\\Desktop\\Projects\\Inventory-managment-microservice\\InventoryManagment\\Services\\Implementations\\CategoryService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\CategoryService.cs",
+              "ToolTip": "C:\\Users\\ANDRIANA\\Desktop\\Projects\\Inventory-managment-microservice\\InventoryManagment\\Services\\Implementations\\CategoryService.cs",
+              "RelativeToolTip": "Services\\Implementations\\CategoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-21T09:46:34.854Z",
+              "WhenOpened": "2026-01-03T13:49:46.896Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-21T09:02:16.516Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "StockTransactionsConfiguration.cs",
-              "DocumentMoniker": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Data\\StockTransactionsConfiguration.cs",
-              "RelativeDocumentMoniker": "Data\\StockTransactionsConfiguration.cs",
-              "ToolTip": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Data\\StockTransactionsConfiguration.cs",
-              "RelativeToolTip": "Data\\StockTransactionsConfiguration.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwB4AAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-21T09:01:26.691Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ProductConfiguration.cs",
-              "DocumentMoniker": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Data\\ProductConfiguration.cs",
-              "RelativeDocumentMoniker": "Data\\ProductConfiguration.cs",
-              "ToolTip": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Data\\ProductConfiguration.cs",
-              "RelativeToolTip": "Data\\ProductConfiguration.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAzwDIAAAAkAAAAAAAAAA==",
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\ANDRIANA\\Desktop\\Projects\\Inventory-managment-microservice\\InventoryManagment\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\ANDRIANA\\Desktop\\Projects\\Inventory-managment-microservice\\InventoryManagment\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-21T08:59:43.028Z",
+              "WhenOpened": "2026-01-03T13:39:51.93Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CategoryConfiguration.cs",
-              "DocumentMoniker": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Data\\CategoryConfiguration.cs",
-              "RelativeDocumentMoniker": "Data\\CategoryConfiguration.cs",
-              "ToolTip": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Data\\CategoryConfiguration.cs",
-              "RelativeToolTip": "Data\\CategoryConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-21T08:59:30.624Z"
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             }
           ]
         }
