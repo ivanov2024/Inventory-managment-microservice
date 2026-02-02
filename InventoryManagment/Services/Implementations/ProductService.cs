@@ -104,7 +104,9 @@ namespace InventoryManagment.Services.Implementations
 
                 product.Name = productDto.Name;
                 product.Price = productDto.Price;
-                product.Quantity = productDto.Quantity;
+                //Skip updating quantity here to avoid unintended stock changes
+                //See IInventoryService for stock adjustments
+                //product.Quantity = productDto.Quantity;
                 product.Description = productDto.Description;
                 product.CategoryId = productDto.CategoryId;
                 product.UpdatedAt = DateTime.UtcNow;
