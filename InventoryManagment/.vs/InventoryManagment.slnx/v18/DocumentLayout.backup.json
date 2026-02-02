@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|d:\\github\\project 1 \u2014 inventory managment microservice\\inventory-managment-microservice\\inventorymanagment\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|d:\\github\\project 1 \u2014 inventory managment microservice\\inventory-managment-microservice\\inventorymanagment\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|solutionrelative:mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|d:\\github\\project 1 \u2014 inventory managment microservice\\inventory-managment-microservice\\inventorymanagment\\controllers\\productsapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|solutionrelative:controllers\\productsapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|d:\\github\\project 1 \u2014 inventory managment microservice\\inventory-managment-microservice\\inventorymanagment\\controllers\\categoryapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|solutionrelative:controllers\\categoryapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|d:\\github\\project 1 \u2014 inventory managment microservice\\inventory-managment-microservice\\inventorymanagment\\services\\implementations\\inventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|solutionrelative:services\\implementations\\inventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|d:\\github\\project 1 \u2014 inventory managment microservice\\inventory-managment-microservice\\inventorymanagment\\controllers\\stockapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|solutionrelative:controllers\\stockapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|d:\\github\\project 1 \u2014 inventory managment microservice\\inventory-managment-microservice\\inventorymanagment\\services\\implementations\\inventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|solutionrelative:services\\implementations\\inventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|d:\\github\\project 1 \u2014 inventory managment microservice\\inventory-managment-microservice\\inventorymanagment\\controllers\\productsapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|solutionrelative:controllers\\productsapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|d:\\github\\project 1 \u2014 inventory managment microservice\\inventory-managment-microservice\\inventorymanagment\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|d:\\github\\project 1 \u2014 inventory managment microservice\\inventory-managment-microservice\\inventorymanagment\\controllers\\categoryapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|solutionrelative:controllers\\categoryapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C8590C73-4ED4-A0C8-48E2-0AE5D710925E}|InventoryManagment.csproj|d:\\github\\project 1 \u2014 inventory managment microservice\\inventory-managment-microservice\\inventorymanagment\\services\\implementations\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -63,32 +67,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Mapping\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "Mapping\\MappingProfile.cs",
+              "ToolTip": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Mapping\\MappingProfile.cs",
+              "RelativeToolTip": "Mapping\\MappingProfile.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T13:19:04.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAQwBUAAABKAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAQwBUAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-02T13:13:41.224Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ProductsApiController.cs",
               "DocumentMoniker": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Controllers\\ProductsApiController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProductsApiController.cs",
               "ToolTip": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Controllers\\ProductsApiController.cs",
               "RelativeToolTip": "Controllers\\ProductsApiController.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAA2wEQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-02T13:10:58.06Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "CategoryApiController.cs",
               "DocumentMoniker": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Controllers\\CategoryApiController.cs",
               "RelativeDocumentMoniker": "Controllers\\CategoryApiController.cs",
@@ -101,33 +118,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "StockApiController.cs",
               "DocumentMoniker": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Controllers\\StockApiController.cs",
               "RelativeDocumentMoniker": "Controllers\\StockApiController.cs",
               "ToolTip": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Controllers\\StockApiController.cs",
               "RelativeToolTip": "Controllers\\StockApiController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACsAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAgwCsAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-02T12:36:49.64Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "InventoryService.cs",
               "DocumentMoniker": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Services\\Implementations\\InventoryService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\InventoryService.cs",
               "ToolTip": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Services\\Implementations\\InventoryService.cs",
               "RelativeToolTip": "Services\\Implementations\\InventoryService.cs",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAAAHIAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAuwHIAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-28T19:45:35.273Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "IInventoryService.cs",
               "DocumentMoniker": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Services\\Interfaces\\IInventoryService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IInventoryService.cs",
@@ -139,7 +156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "StockChangeRequestDto.cs",
               "DocumentMoniker": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\DTOs\\StockTransaction\\StockChangeRequestDto.cs",
               "RelativeDocumentMoniker": "DTOs\\StockTransaction\\StockChangeRequestDto.cs",
@@ -151,7 +168,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "StockTransactionDto.cs",
               "DocumentMoniker": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\DTOs\\StockTransaction\\StockTransactionDto.cs",
               "RelativeDocumentMoniker": "DTOs\\StockTransaction\\StockTransactionDto.cs",
@@ -163,7 +180,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "ProductService.cs",
               "DocumentMoniker": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Services\\Implementations\\ProductService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\ProductService.cs",
@@ -175,7 +192,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "CategoryViewModel.cs",
               "DocumentMoniker": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Models\\CategoryViewModel.cs",
               "RelativeDocumentMoniker": "Models\\CategoryViewModel.cs",
@@ -187,7 +204,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "CategoryService.cs",
               "DocumentMoniker": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Services\\Implementations\\CategoryService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\CategoryService.cs",
@@ -200,7 +217,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "ICategoryService.cs",
               "DocumentMoniker": "D:\\GITHUB\\Project 1 \u2014 Inventory managment microservice\\Inventory-managment-microservice\\InventoryManagment\\Services\\Interfaces\\ICategoryService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\ICategoryService.cs",
